@@ -1,0 +1,144 @@
+html,
+body {
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	background: #ea8f41;
+	font-family: 'Titillium Web';
+	transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) 500ms;
+}
+
+::selection {
+	background: #fff;
+}
+
+#Rinka {
+	position: absolute;
+	color: #fff;
+	font-size: 30px;
+	display: flex;
+	bottom: 75px;
+	left: 0;
+	right: 0;
+	top: 0;
+	white-space: pre-line;
+	display: flex;
+	flex-direction: column;
+}
+
+#Rinka div {
+	margin: auto;
+}
+
+#Rinka div p {
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-top: 0;
+	margin-bottom: 0;
+	max-width: 800px;
+	text-align: center;
+	transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) 500ms;
+}
+
+#form {
+	display: none;
+	justify-content: center;
+	position: absolute;
+	bottom: 75px;
+	left: 0;
+	right: 0;
+}
+
+#wrapper {
+	display: flex;
+	overflow-x: auto;
+	margin-left: 25px;
+}
+
+.input {
+	display: flex;
+}
+
+.input input {
+	width: 350px;
+	height: 50px;
+	color: #fff;
+	font-size: 24px;
+	position: relative;
+	background: #fff0;
+	border: solid #fff 1px;
+	text-indent: 10px;
+	font-family: 'Titillium Web';
+	transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) 500ms;
+}
+
+.admin {
+	display: flex;
+}
+.admin input {
+	width: 350px;
+	height: 50px;
+	color: #fff;
+	font-size: 24px;
+	position: relative;
+	background: #fff0;
+	border: solid #fff 1px;
+	text-indent: 10px;
+	font-family: 'Titillium Web';
+	transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) 500ms;
+}
+
+.admin :nth-child(1) {
+	display: none;
+	width: 0px;
+	font-size: 14px;
+	border-left: none;
+	border-right: none;
+}
+
+.admin :nth-child(2) {
+	display: none;
+	width: 0px;
+	font-size: 14px;
+	text-indent: 5px;
+	border-left: none;
+}
+
+#button {
+	position: relative;
+	width: 50px;
+	height: 54px;
+	background: #fff0;
+	border: solid #fff 1px;
+	border-left: none;
+	cursor: pointer;
+	margin-right: 25px;
+	transition: cubic-bezier(0.18, 0.89, 0.32, 1.28) 500ms;
+}
+
+*:focus {
+	outline: none;
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+	#form {
+		bottom: 25px;
+	}
+	#wrapper {
+		flex-direction: column;
+	}
+	.input input {
+		font-size: 18px;
+	}
+	.admin :nth-child(1) {
+		width: 75px;
+		height: 0;
+		border-left: 1px solid;
+		border-top: none;
+	}
+	.admin :nth-child(2) {
+		width: 275px;
+		height: 0;
+		border-top: none;
+	}
+}
