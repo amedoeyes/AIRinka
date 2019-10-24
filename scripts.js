@@ -825,13 +825,13 @@ $(document).ready(function() {
 			}, 100);
 
 			setTimeout(() => {
-				$('.Rinka').text('umm nothing seems to have changed oh well...');
+			``	$('.Rinka').text('umm nothing seems to have changed oh well...');
 				typingEffect();
 			}, 5000);
 
 			setTimeout(() => {
 				setTimeout(() => {
-					$('.Rinka').text('wait something is happing');
+					$('.Rinka').text('wait something is happening');
 					typingEffect();
 
 					$('#error').fadeOut();
@@ -842,9 +842,13 @@ $(document).ready(function() {
 						$('#form').fadeOut(1000);
 						$('#error')
 							.fadeIn(1000)
-							.text('Thank you for playing\n and thank you for being a great friend')
-							.css({ transition: 'none', fontSize: 50 });
-
+							.text('Thank you for playing,\n and thank you for being a great friend')
+							.css('transition', 'none');
+						if (viewHeight > viewWidth && viewWidth < 1024) {
+							$('#error').css('fontSize', '50');
+						} else {
+							$('#error').css('fontSize', '30');
+						}
 						document.title = 'thank you';
 					}, caption.length * 150);
 
