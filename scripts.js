@@ -825,7 +825,7 @@ $(document).ready(function() {
 			}, 100);
 
 			setTimeout(() => {
-			``	$('.Rinka').text('umm nothing seems to have changed oh well...');
+				$('.Rinka').text('umm nothing seems to have changed oh well...');
 				typingEffect();
 			}, 5000);
 
