@@ -82,12 +82,14 @@ $(document).ready(function() {
 					'how are you',
 					'help',
 					'admin',
+					'no',
 					'sure',
-					'yes'
+					'yes',
+					'nahari'
 				],
 				length = -1;
 
-			for (var i = 0; i < substrings.length; i++) {
+			for (var i = 0; i <= substrings.length; i++) {
 				if (
 					sentence
 						.toLowerCase()
@@ -95,9 +97,13 @@ $(document).ready(function() {
 						.includes(substrings[length])
 				) {
 					understand = true;
+					console.log(understand);
+
+					break;
 				} else {
 					length++;
 					understand = false;
+					console.log(understand);
 				}
 			}
 		}
@@ -117,12 +123,14 @@ $(document).ready(function() {
 				'how are you',
 				'help',
 				'admin',
+				'no',
 				'sure',
-				'yes'
+				'yes',
+				'nahari'
 			],
 			length = -1;
 
-		for (var i = 0; i < substrings.length; i++) {
+		for (var i = 0; i <= substrings.length; i++) {
 			if (
 				sentence
 					.toLowerCase()
@@ -130,6 +138,7 @@ $(document).ready(function() {
 					.includes(substrings[length])
 			) {
 				understand = true;
+				break;
 			} else {
 				length++;
 				understand = false;
