@@ -1,5 +1,3 @@
-// hi nahari :)
-
 //variables
 
 var x = 0,
@@ -61,6 +59,7 @@ function rainbowInterval(flag) {
 		clearInterval(rainbow);
 	}
 }
+
 //main algorithm
 
 $(document).ready(function() {
@@ -159,7 +158,11 @@ $(document).ready(function() {
 
 		if (e.keyCode == 13 && pressed == false) {
 			$('#button').click();
-			$('input[name=input]').blur();
+
+			if (viewHeight > viewWidth && viewWidth < 1024) {
+				$('input[name=input]').blur();
+				$('input[name=admin]').blur();
+			}
 
 			pressed = true;
 			setTimeout(() => {
@@ -406,6 +409,32 @@ $(document).ready(function() {
 					.indexOf(substrings[length]) != -1
 			) {
 				$('.Rinka').text('ok');
+			}
+		}
+	});
+
+	$('#button').click(function() {
+		var sentence = $('input[name=input]').val(),
+			substrings = ['nahari'],
+			length = substrings.length;
+
+		while (length--) {
+			if (
+				y == 1 &&
+				sentence
+					.toLowerCase()
+					.replace(/'|\.|\?/g, '')
+					.indexOf(substrings[length]) != -1
+			) {
+				$('.Rinka').text('');
+			} else if (
+				y > 0 &&
+				sentence
+					.toLowerCase()
+					.replace(/'|\.|\?/g, '')
+					.indexOf(substrings[length]) != -1
+			) {
+				$('.Rinka').text('You mean the Lashagh? :)');
 			}
 		}
 	});
